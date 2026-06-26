@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brute Force Attack Simulator</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🔐 Brute Force Attack Simulator</h1>
+
+    <p class="subtitle">
+        Educational Cybersecurity Demonstration
+    </p>
+
+    <div class="card">
+
+        <label>Enter Target Password</label>
+
+        <input
+            type="text"
+            id="password"
+            placeholder="Example: abc123">
+
+        <button onclick="startSimulation()">
+
+            Start Simulation
+
+        </button>
+
+        <div class="results">
+
+            <h2 id="status">
+                Waiting...
+            </h2>
+
+            <div class="progress">
+
+                <div id="progress-bar"></div>
+
+            </div>
+
+            <p>
+                <strong>Password Found:</strong>
+
+                <span id="foundPassword">-</span>
+            </p>
+
+            <p>
+                <strong>Total Attempts:</strong>
+
+                <span id="attempts">0</span>
+            </p>
+
+            <p>
+                <strong>Time Taken:</strong>
+
+                <span id="time">0 sec</span>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
